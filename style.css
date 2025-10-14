@@ -1,0 +1,48 @@
+/*
+PROJETO NO FIGMA:
+https://www.figma.com/design/tFDVyNuKhrT2G03k2dCstW/Alura-Plus---Layout?node-id=1-77
+*/
+
+:root{
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+}
+
+   /* Exemplo de aplicação */
+   h1 {
+       color: var(--branco-principal);
+   }
+   p {
+       color: var(--cinza-secundario);
+   }
+   .botao {
+       background-color: var(--botao-azul);
+   }
+
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);   
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.principal {
+    background-image: url("img/Background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container{
+    height: 100vh;
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+}
