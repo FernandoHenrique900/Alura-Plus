@@ -8,6 +8,7 @@ https://www.figma.com/design/tFDVyNuKhrT2G03k2dCstW/Alura-Plus---Layout?node-id=
     --cinza-secundario: #C0C0C0;
     --botao-azul: #167BF7;
     --cor-de-fundo: #00030C;
+    --fonte-principal: "Inter";
 }
 
    /* Exemplo de aplicação */
@@ -23,7 +24,10 @@ https://www.figma.com/design/tFDVyNuKhrT2G03k2dCstW/Alura-Plus---Layout?node-id=
 
 body{
     background-color: var(--cor-de-fundo);
-    color: var(--branco-principal);   
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
 }
 
 *{
@@ -35,14 +39,47 @@ body{
     background-image: url("img/Background.png");
     background-repeat: no-repeat;
     background-size: contain;
+    align-items: center; /*O código começa com um elemento de bloco (a div), ou seja, que tem display block, 
+    e há elementos dentro dele que são inline. Dessa maneira, usar a propriedade text-align na div permitirá 
+    alinhar para qualquer lado que você desejar os elementos filhos da div */
+    text-align: center; /* Centraliza horizontalmente */
 }
 
 .container{
     height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 .container__botao {
     background-color: var(--botao-azul);
     border-radius: 5px;
     padding: 1em;
+    color: var(--branco-principal);
+    display: block;
+    text-decoration: none; /* Remove o sublinhado padrão */
+    margin-bottom: 1em;
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0; /* Adiciona margem inferior para separar a imagem do texto */
+}
+
+.container__caixa {
+    margin: 0 6em; /* Adiciona margem horizontal para centralizar o conteúdo */
 }
