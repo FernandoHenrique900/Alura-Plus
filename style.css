@@ -9,6 +9,7 @@ https://www.figma.com/design/tFDVyNuKhrT2G03k2dCstW/Alura-Plus---Layout?node-id=
     --botao-azul: #167BF7;
     --cor-de-fundo: #00030C;
     --fonte-principal: "Inter";
+    --botao-azul-efeito: #295bbf;
 }
 
    /* Exemplo de aplicação */
@@ -46,9 +47,10 @@ body{
 }
 
 .container{
-    height: 100vh;
+    min-height: 70vh; /* Reduzido de 100vh para 70vh para diminuir o espaçamento */
     display: grid;
     grid-template-columns: 50% 50%;
+    margin-bottom: 2em; /* Adiciona um espaçamento controlado entre as sections */
 }
 
 .container__botao {
@@ -149,6 +151,14 @@ body{
    margin: 1em;
 }
 
+.lista__link a:hover {
+    color: var(--botao-azul);
+} 
+
+.lista__link a:active {
+    color: var(--botao-azul-efeito);
+}
+
 .rodape__texto {
     font-size: 14px;
     color: var(--cinza-secundario);
@@ -158,4 +168,9 @@ body{
 .rodape {
    text-align: center;
    margin: 5em 3em;
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
 }
